@@ -14,10 +14,53 @@ import Navbar from "../components/Navbar.astro";
 	<body>
 		<Navbar />
 		<slot />
+		<footer>
+			<p>© Copyrighted 2025, The Hominians Limited Co.</p>
+			<div class="social-links">
+				<a href="https://www.facebook.com/TheHominians/"><img src="facebook.svg"/></a>
+				<a href="https://www.instagram.com/thehominians/?hl=en"><img src="instagram.svg"/></a>
+				<a href="https://www.linkedin.com/company/carterapp/"><img src="linkedin.svg"/></a>
+			</div>
+		</footer>
 	</body>
 </html>
 
-<style>
+<style is:global>
+
+	.social-links {
+		display: flex;
+		flex-direction: row;
+		gap: 10px;
+	}
+
+		a {
+		all: unset; 
+		display: inline;
+	}
+
+	@font-face {
+		font-family: 'TTNorms';
+		src: url('/fonts/TT-Norms-Pro-Regular.otf');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'TTNorms';
+		src: url('/fonts/TT Norms Pro Bold.otf');
+		font-weight: 600;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'TTNorms';
+		src: url('/fonts/TT Norms Pro Medium.otf');
+		font-weight: 500;
+		font-style: normal;
+		font-display: swap;
+	}
 	* {
 		margin: 0;
 		padding: 0;
@@ -25,10 +68,32 @@ import Navbar from "../components/Navbar.astro";
 	}
 
 	body {
-		font-family: Arial, sans-serif;
+		font-family: 'TTNorms', sans-serif;
 	}
 
 	h1, p {
 		margin: 0;
 	}
+
+	footer {
+  display: flex;
+  flex-direction: row;
+  height: 70px;
+  padding: 0 4rem;
+  margin-top: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;       /* remove fixed height */
+    gap: 10px;
+    padding: 1rem;
+    text-align: center; /* center text & links */
+  }
+}
 </style>

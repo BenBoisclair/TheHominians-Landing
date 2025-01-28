@@ -1,71 +1,336 @@
 ---
-
-import Navbar from './Navbar.astro';
 ---
+    <div>
+      <!-- Main Section -->
+      <div id="main" class="main-section">
+        <div class="text-section section-space">
+          <h1 class="title">The Hominians</h1>
+          <p class="text">A team with a dream to elevate the lives of others.</p>
+          <p class="text">
+            The Hominians share a common aim: to make an impact on society, especially for those
+            often neglected by authorities. To accomplish this, we have launched an online
+            marketing platform for vendors in Thai local markets called TasteMap.
+          </p>
+          <a href="#solution"><div class="call-to-action">View Our Solution</div></a>
+        </div>
+        <img class="heading-photo" src="/heading-photo.png" />
+      </div>
 
-<div>
-	<div class="main-section">
-		<div class="text-section">
-			<h1 class="title">The Hominians</h1>
-			<p class="text">A team with a dream to elevate the lives of others.</p>
-			<p class="text">The Hominians share a common aim: to make an impact on society, especially for those <br />often neglected by authorities. To accomplish this, we have launched an online <br /> marketing platform for vendors in Thai local markets called TasteMap.</p>
-			<div class="call-to-action">View Our Solution</div>
-		</div>
-		
-		<img class="heading-photo" src="/heading-photo.png" />
-	</div>
-	<div class="solution-section">
+      <!-- Solution Section -->
+      <div id="solution" class="solution-section section-space">
+        <div class="app-showcase">
+          <img class="mockups" src="/mockups.svg" />
+          <div class="showcase-text-section">
+            <img class="taste-map-logo" src="/taste-map-logo.svg" />
+            <p>
+              TasteMap is an innovative platform located in markets across Bangkok, Thailand, that connects international tourists with the city’s vibrant local markets and micro-vendors, providing a gateway to authentic cultural experiences. Designed to support Thailand’s informal economy, TasteMap empowers small vendors by offering digital tools to increase visibility and enhance customer access. Through TasteMap’s recommendation algorithm, the platform enables travelers to discover hidden gems, enriching their experience while helping local vendors reach a global audience. TasteMap aims to bridge the gap between traditional market vendors and foreign tourists, ultimately driving sustainable economic growth in local communities.
+            </p>
+            <div class="taste-map-action">
+              <a href="https://www.taste-map.com">Visit our Website</a>
+            </div>
+          </div>
+        </div>
 
-	</div>
-	<div class="team-section"></div>
-	<div class="contact-section"></div>
-</div>
+        <div class="partner-section">
+          <h2>Our Partners</h2>
+          <div class="partners-list">
+            <img src="/Partners/APEC.svg" />
+            <img src="/Partners/ETDA.svg" />
+            <img src="/Partners/3.svg" />
+            <img src="/Partners/CHULA.svg" />
+            <img src="/Partners/SCII.svg" />
+            <img src="/Partners/MAX_VENTURES.svg" />
+            <img src="/Partners/YOUTH.svg" />
+            <img src="/Partners/Brotherhood.svg" />
+            <img src="/Partners/DGA.svg" />
+            <img src="/Partners/ENHANCE.svg" />
+            <img src="/Partners/UNDP.svg" />
+            <img src="/Partners/GEN.svg" />
+          </div>
+        </div>
+      </div>
 
-<style>
+      <!-- Team Section -->
+      <div id="team" class="team-section section-space">
+        <h2 class="our-team-title">Our Team</h2>
+        <div class="team-members">
+          <div class="member-card">
+            <img src="/team/paolo.svg" />
+            <p class="member-name">Suwapat Kongchan</p>
+          </div>
+          <div class="member-card">
+            <img src="/team/I.svg" />
+            <p class="member-name">Airada Songpatthanayuth</p>
+          </div>
+          <div class="member-card">
+            <img src="/team/mai.svg" />
+            <p class="member-name">Kawisara Saikaew</p>
+          </div>
+          <div class="member-card">
+            <img src="/team/ben.svg" />
+            <p class="member-name">Benedict Boisclair</p>
+          </div>
+          <div class="member-card">
+            <img src="/team/looknam.svg" />
+            <p class="member-name">Neeranut Panthumas</p>
+          </div>
+          <div class="member-card">
+            <img src="/team/non.svg" />
+            <p class="member-name">Tanatat Khuttapan</p>
+          </div>
+        </div>
 
-	.main-section {
-		display: flex;
-		flex-direction: column;
-		border: 1px #000000 solid;
-		height: 100vh;
-		box-sizing: border-box;
-	}
+        <div id="contact" class="contact-section">
+          <div class="get-in-touch-button">Get In Touch With Us</div>
+          <p>
+            If you wish to tell us about anything – from funding to opportunities – please feel free
+            to let us know via the above button or our email — suwapatkc@gmail.com.
+          </p>
+        </div>
 
-	.text-section {
-		display: flex;
-		flex-direction: column;
-		padding: 220px 160px;
-		gap: 20px;
-		line-height: 1.5;
-	}
+        <div class="back-to-top-section">
+			<img src="arrow-up.svg" />
+          <div class="back-to-top">Back to Top</div>
+        </div>
+      </div>
+    </div>
 
-	.solution-section {
-		background-color: #FB8F1F;
-		height: 10em;
-	}
+    <!-- Styles -->
+    <style>
+      /* Global & Layout */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: sans-serif;
+      }
+      .section-space {
+        padding: 4rem;
+      }
+      /* Main Section */
+      .main-section {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        position: relative;
+      }
+      .text-section {
+        display: flex;
+        flex-direction: column;
+        padding-top: 220px;
+        gap: 20px;
+        line-height: 1.5;
+		max-width: 800px;
+      }
+      .title {
+        font-weight: 700;
+        font-size: 50px;
+      }
+      .text {
+        font-weight: 500;
+      }
+      .call-to-action {
+        color: white;
+        background-color: #fb8f1f;
+        padding: 10px 20px;
+        font-weight: 600;
+        border-radius: 8px;
+        width: fit-content;
+        margin-top: 20px;
+        cursor: pointer;
+      }
+      .heading-photo {
+        margin-top: 2rem;
+        width: 100%;
+        max-height: 400px;
+        object-fit: cover;
+      }
 
-	.text {
-		margin: 0;
-		padding: 0;
-	}
-	.title {
-		font-weight: 700;
-		font-size: 50px;
-		margin: 0;
-	}
-	.call-to-action {
-		color: white;
-		background-color: #FB8F1F;
-		padding: 10px 20px;
-		font-weight: 600;
-		border-radius: 8px;
-		width: fit-content;
-		margin-top: 20px;
-	}
+      /* Solution Section */
+      .solution-section {
+        background-color: #fb8f1f;
+      }
+      .app-showcase {
+        display: flex;
+      }
+      .mockups {
+        margin-top: -10em;
+        max-width: 100%;
+      }
+      .showcase-text-section {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        flex-grow: 1;
+        color: white;
+        padding: 5em;
+        line-height: 1.5;
+        text-align: justify;
+      }
+      .taste-map-logo {
+        width: 20em;
+        max-width: 100%;
+      }
+      .taste-map-action {
+        background-color: #fff3e1;
+        color: #fb8f1f;
+        padding: 10px 20px;
+        border-radius: 8px;
+        width: fit-content;
+        font-weight: 600;
+        cursor: pointer;
+      }
 
-	.heading-photo {
-		position: absolute;
-		bottom: 0;
-		z-index: -10;
-	}
-</style>
+      /* Partner Section */
+      .partner-section {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        margin-top: 4em;
+      }
+      .partner-section h2 {
+        text-align: center;
+        color: #fff3e1;
+        font-weight: 500;
+      }
+      .partners-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* Team Section */
+      .our-team-title {
+        font-size: 3rem;
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 40px;
+      }
+      .team-members {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 60px;
+        justify-content: center;
+      }
+      .member-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+      .member-name {
+        font-weight: 600;
+      }
+
+      /* Contact */
+      .contact-section {
+        margin-top: 60px;
+        padding: 30px;
+        background-color: #fff3e1;
+        border-radius: 20px;
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+      }
+      .get-in-touch-button {
+        border: 1px #fb8f1f solid;
+        border-radius: 8px;
+        padding: 10px 20px;
+        width: fit-content;
+        color: #e35818;
+        font-weight: 600;
+      }
+      .back-to-top-section {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+		align-items: center;
+		gap: 5px;
+		cursor: pointer;
+      }
+      .back-to-top {
+        color: #e35818;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+
+      /* Responsive Adjustments */
+
+	  @media (max-width: 1050px) {
+		.app-showcase {
+          flex-direction: column;
+          align-items: center;
+        }
+	  }
+      @media (max-width: 992px) {
+
+		.main-section {
+			height: 100vh;
+		}
+
+		.text-section {
+			height: 100vh;
+			justify-content: center;
+			gap: 1.5rem;
+		}
+        .section-space {
+          padding: 2rem;
+        }
+        .showcase-text-section {
+          padding: 2rem;
+        }
+
+		.app-showcase {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+      @media (max-width: 768px) {
+        .title {
+          font-size: 36px;
+        }
+        .mockups {
+          margin-top: 0;
+        }
+        .app-showcase {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+      @media (max-width: 480px) {
+        .title {
+          font-size: 2.5rem;
+        }
+
+		.main-section {
+			height: 100vh;
+		}
+
+		.text-section {
+			height: 100vh;
+			justify-content: center;
+			gap: 1.5rem;
+		}
+
+		.heading-photo {
+			max-height: 800px;
+		}
+
+        .showcase-text-section {
+          padding: 1rem;
+        }
+        .section-space {
+          padding: 1rem;
+        }
+
+		.mockups {
+        max-width: 100%;
+      }
+      }
+    </style>
