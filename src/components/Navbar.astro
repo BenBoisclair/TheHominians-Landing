@@ -85,9 +85,32 @@
 </style>
 
 <script>
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('nav-links');
-  hamburger?.addEventListener('click', () => {
-    navLinks?.classList.toggle('show');
+  // Smooth scrolling for navbar links
+  document.addEventListener("DOMContentLoaded", () => {
+    const navLinks = document.querySelectorAll(".nav-links a");
+
+    navLinks.forEach((link) => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault(); // Prevent default anchor behavior
+
+        const targetId = link.getAttribute("href")?.substring(1);
+        const targetElement = document.getElementById(targetId ?? "");
+
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      });
+    });
+
+    // Hamburger toggle for mobile
+    const hamburger = document.getElementById("hamburger");
+    const navLinksContainer = document.getElementById("nav-links");
+
+    hamburger?.addEventListener("click", () => {
+      navLinksContainer?.classList.toggle("show");
+    });
   });
 </script>

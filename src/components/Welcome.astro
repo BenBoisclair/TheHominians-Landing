@@ -156,7 +156,6 @@
         display: flex;
       }
       .mockups {
-        margin-top: -10em;
         max-width: 100%;
       }
       .showcase-text-section {
@@ -334,3 +333,17 @@
       }
       }
     </style>
+
+	<script>
+  // Back to Top Functionality
+  document.addEventListener("DOMContentLoaded", () => {
+    const backToTop = document.querySelector(".back-to-top-section");
+
+    backToTop?.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+  });
+</script>
