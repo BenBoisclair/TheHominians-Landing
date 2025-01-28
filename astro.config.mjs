@@ -1,9 +1,9 @@
-// @ts-check
 import { defineConfig } from "astro/config";
-// @ts-ignore
-import vercel from "@astrojs/vercel";
+// Import /static for a static site
+import vercelStatic from "@astrojs/vercel/static";
 
-// https://astro.build/config
 export default defineConfig({
-  adapter: vercel(),
+  // Must be 'static' or 'hybrid'
+  output: "static",
+  adapter: vercelStatic(),
 });
